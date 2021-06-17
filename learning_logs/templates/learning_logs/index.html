@@ -1,0 +1,21 @@
+{% extends "learning_logs/base.html" %}
+
+<!-- the above code has to be placed on the first line to tell django which parent template to inheret from 
+pulls in everything from base.html and allows index.html to define what goes in the speace reserved by the content block
+
+the below is non inhereted
+-->
+
+
+{% block page_header %}
+<div class="jumbotron">
+    <h1 class="display-3">Track your learning.</h1>
+
+    <p class="lead"> Make your own Learning Log, and keep a list of the topics you learned about. Whenever you learn
+        something new about a topic, make an entry summarizing what you've learned. </p>
+
+    <a class="btn btn-lg btn-primary" href="{% url 'users:register' %}" role="button">Register &raquo;</a>
+
+</div>
+
+{% endblock page_header %}
